@@ -2,6 +2,10 @@ const jokeText = document.querySelector(".joke-text");
 const a = document.querySelector("#tweet-quote");
 const loader = document.getElementById("loader");
 
+document.addEventListener('DOMContentLoaded', () => {
+  getJoke(); // Fetch a joke when the page loads
+});
+
 async function getJoke() {
   jokeText.innerHTML = "";
   jokeText.append(loader);
